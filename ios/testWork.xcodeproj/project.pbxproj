@@ -14,6 +14,7 @@
 		33B92017D900DC37C9F7F6D2 /* libPods-testWork-testWorkTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B72380509F30FEBCB54A9E8D /* libPods-testWork-testWorkTests.a */; };
 		7A172569F494DE7F7290AA04 /* libPods-testWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB28604AE864CE5C48A33A5 /* libPods-testWork.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F6028DC22625D8CB006656A5 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6028DC12625D8CB006656A5 /* BootSplash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		B1845F6E167F167575CB3FD4 /* Pods-testWork-testWorkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testWork-testWorkTests.debug.xcconfig"; path = "Target Support Files/Pods-testWork-testWorkTests/Pods-testWork-testWorkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B72380509F30FEBCB54A9E8D /* libPods-testWork-testWorkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testWork-testWorkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F6028DC12625D8CB006656A5 /* BootSplash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BootSplash.storyboard; sourceTree = "<group>"; };
 		FBB28604AE864CE5C48A33A5 /* libPods-testWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				F6028DC12625D8CB006656A5 /* BootSplash.storyboard */,
 			);
 			name = testWork;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6028DC22625D8CB006656A5 /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);

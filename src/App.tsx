@@ -10,6 +10,7 @@ import { IApplicationState } from 'app/system/store'
 import { Loader } from 'app/module/global/view/Loader'
 import { localization } from 'app/system/localization'
 import { configureStore } from './system/store/configureStore'
+import RNBootSplash from "react-native-bootsplash";
 
 YellowBox.ignoreWarnings(['Remote debugger'])
 
@@ -38,6 +39,9 @@ export class App extends PureComponent<IProps, IState>{
   }
 
   componentDidMount(): void {
+    setTimeout(async () => {
+      await RNBootSplash.hide({ fade: true })
+    },3000)
     AppState.addEventListener('change', this.handleAppStateChange)
   }
 

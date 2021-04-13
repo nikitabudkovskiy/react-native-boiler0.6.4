@@ -14,7 +14,6 @@
     "tsw": "yarn run tsc --watch",
     "renameAndroid": "chmod u=rwx ./renameReleaseAndroidApk.bash && ./renameReleaseAndroidApk.bash",
     "fixWebView": "chmod 777 removeWebView.sh && sudo ./removeWebView.sh",
-    "test": "jest",
     "postinstall": "patch-package"
   },
   "dependencies": {
@@ -28,6 +27,7 @@
     "moment": "^2.27.0",
     "react": "17.0.1",
     "react-native": "0.64.0",
+    "react-native-bootsplash": "^3.2.0",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-iphone-x-helper": "^1.3.1",
     "react-native-localization": "^2.1.6",
