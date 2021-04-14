@@ -12,7 +12,7 @@ import { localization } from 'app/system/localization'
 import { configureStore } from './system/store/configureStore'
 import RNBootSplash from "react-native-bootsplash";
 
-YellowBox.ignoreWarnings(['Remote debugger'])
+// YellowBox.ignoreWarnings(['Remote debugger'])
 
 interface IProps {
 
@@ -38,10 +38,10 @@ export class App extends PureComponent<IProps, IState>{
     appStatus: AppState.currentState, 
   }
 
-  componentDidMount(): void {
-    setTimeout(async () => {
+  async componentDidMount(): Promise<void> {
+    // setTimeout(async () => {
       await RNBootSplash.hide({ fade: true })
-    },3000)
+    // },0)
     AppState.addEventListener('change', this.handleAppStateChange)
   }
 
@@ -65,16 +65,16 @@ export class App extends PureComponent<IProps, IState>{
     localization.list.setLanguage(state.system.language)
   }
 
-  renderLoader = (): JSX.Element => {
-    return (
-      <Loader />
-    )
-  }
+  // renderLoader = (): JSX.Element => {
+  //   return (
+  //     <Loader />
+  //   )
+  // }
 
   render(): JSX.Element {
     return (
      <PersistGate
-       loading={this.renderLoader()}
+      //  loading={this.renderLoader()}
        persistor={this.persistor}
      >
         <Provider store={this.store}>

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, Button } from 'react-native'
 import { 
   styleSheetCreate, 
   style,
@@ -21,7 +21,7 @@ export class Loader extends PureComponent<IProps, IState>{
   refFlash: any
 
   componentDidMount() {
-    // console.log('ref', this.refFlash.toggleVisibility())
+   console.log('ref', this.refFlash)
   }
 
   refFlashHandler = (ref: any) => this.refFlash = ref
@@ -36,14 +36,21 @@ export class Loader extends PureComponent<IProps, IState>{
 
     return (
       <View style={container}>
-      {/* <FlashMessage position="top" style={{ zIndex: 9999 }} animated /> */}
-        <TouchableOpacity
-          // onPress={this.testHandler}
-        >
-        <Text>
-          {localization.list.pleaseWait}
-        </Text>
-        </TouchableOpacity>
+        
+      <FlashMessage ref={this.refFlashHandler} position="top" animated />
+      <Button
+          onPress={() => {
+            showMessage({
+              message: "My message title",
+              description: "My message description",
+              type: "default",
+              backgroundColor: "purple", // background color
+              color: "#606060", // text color
+            });
+          }}
+          title="Request Details"
+          color="#841584"
+        />
       </View>
     )
   }
