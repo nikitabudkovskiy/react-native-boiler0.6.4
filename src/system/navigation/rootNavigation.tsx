@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { ListPages  } from 'app/system/navigation'
-import { Loader } from 'app/module/global/view/Loader'
+import { Loader } from 'app/modules/global/view/Loader'
 
 const Stack = createStackNavigator()
 
