@@ -1,4 +1,4 @@
-import { applyMiddleware, createStore } from 'redux'
+import { applyMiddleware, createStore, Middleware } from 'redux'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import { persistStore, persistReducer } from 'redux-persist'
@@ -11,10 +11,18 @@ const persistConfig = {
   whitelist: ['system'],
 }
 
+let middleware: Middleware[] = [thunk];
+
+if (__DEV__) {
+  middleware = [...middleware, logger];
+} else {
+  middleware = [...middleware];
+}
+
 const persistedReducer = persistReducer(persistConfig,rootReducer)
 
 export const configureStore = (callback: () => void, state?: IApplicationState) => {
-  const store = createStore(persistedReducer, state, applyMiddleware(thunk, logger))
+  const store = createStore(persistedReducer, state, applyMiddleware(...middleware))
   const persistor = persistStore(store, null, callback)
   return { store, persistor }
 }

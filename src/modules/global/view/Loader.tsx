@@ -20,7 +20,8 @@ export class Loader extends PureComponent<IProps, IState>{
   refFlash: any
 
   componentDidMount() {
-    console.log("fkldmkf")
+    console.log("TEST")
+    // console.warn('fdf')
     // throw new Error('fjdnfjndjkfn')
   }
 
