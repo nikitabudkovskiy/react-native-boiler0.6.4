@@ -6,7 +6,7 @@ import {
   Color,
   styleSheetFlatten,
  } from 'app/system/helpers'
-import { localization } from 'app/system/localization'
+
 
 interface IProps {
   isFloating?: boolean
@@ -20,10 +20,11 @@ export class Loader extends PureComponent<IProps, IState>{
   refFlash: any
 
   componentDidMount() {
-   console.log('ref', this.refFlash)
+    console.log("fkldmkf")
+    // throw new Error('fjdnfjndjkfn')
   }
 
-  refFlashHandler = (ref: any) => this.refFlash = ref
+
 
   render() {
     const { isFloating } = this.props
@@ -35,21 +36,9 @@ export class Loader extends PureComponent<IProps, IState>{
 
     return (
       <View style={container}>
-        
-      {/* <FlashMessage ref={this.refFlashHandler} position="top" animated />
-      <Button
-          onPress={() => {
-            showMessage({
-              message: "My message title",
-              description: "My message description",
-              type: "default",
-              backgroundColor: "purple", // background color
-              color: "#606060", // text color
-            });
-          }}
-          title="Request Details"
-          color="#841584"
-        /> */}
+        <Text>
+          Loader
+        </Text>
       </View>
     )
   }

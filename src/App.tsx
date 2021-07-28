@@ -7,10 +7,11 @@ import { Persistor } from 'redux-persist'
 import { Store } from 'redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { IApplicationState } from 'app/system/store'
-import { Loader } from 'app/module/global/view/Loader'
+import { Loader } from 'app/modules/global/view/Loader'
 import { localization } from 'app/system/localization'
 import { configureStore } from './system/store/configureStore'
 import RNBootSplash from "react-native-bootsplash";
+import { ErrorBoundary } from './service/ErrorBoundary'
 
 // YellowBox.ignoreWarnings(['Remote debugger'])
 
@@ -77,11 +78,13 @@ export class App extends PureComponent<IProps, IState>{
       //  loading={this.renderLoader()}
        persistor={this.persistor}
      >
+        <ErrorBoundary>
         <Provider store={this.store}>
           <NavigationContainer ref={this.setNavigatorRef}>
             <RootNavigator />
           </NavigationContainer>
         </Provider>
+        </ErrorBoundary>
      </PersistGate>
     )
   }
