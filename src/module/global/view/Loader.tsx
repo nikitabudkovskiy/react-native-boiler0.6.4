@@ -7,7 +7,6 @@ import {
   styleSheetFlatten,
  } from 'app/system/helpers'
 import { localization } from 'app/system/localization'
-import FlashMessage, { showMessage, hideMessage } from "react-native-flash-message"
 
 interface IProps {
   isFloating?: boolean
@@ -37,7 +36,7 @@ export class Loader extends PureComponent<IProps, IState>{
     return (
       <View style={container}>
         
-      <FlashMessage ref={this.refFlashHandler} position="top" animated />
+      {/* <FlashMessage ref={this.refFlashHandler} position="top" animated />
       <Button
           onPress={() => {
             showMessage({
@@ -50,7 +49,7 @@ export class Loader extends PureComponent<IProps, IState>{
           }}
           title="Request Details"
           color="#841584"
-        />
+        /> */}
       </View>
     )
   }
