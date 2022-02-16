@@ -18,6 +18,7 @@ module.exports = function (api) {
             },
           ],
           'transform-remove-console',
+          'react-native-reanimated/plugin',
         ],   //removing consoles.log from app during release (production) versions
       },
       development: {
@@ -33,6 +34,7 @@ module.exports = function (api) {
               },
             },
           ],
+          'react-native-reanimated/plugin',
         ],
       }
     },
