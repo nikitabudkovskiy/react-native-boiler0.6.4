@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { AppState, AppStateStatus, YellowBox, } from 'react-native'
+import {AppState, AppStateStatus, Platform, UIManager, YellowBox,} from 'react-native'
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native'
 import { RootNavigator } from 'app/system/navigation/rootNavigation'
 import { Provider } from 'react-redux'
@@ -7,11 +7,15 @@ import { Persistor } from 'redux-persist'
 import { Store } from 'redux'
 import { PersistGate } from 'redux-persist/integration/react'
 import { IApplicationState } from 'app/system/store'
-import { Loader } from 'app/modules/global/view/Loader'
 import { localization } from 'app/system/localization'
 import { configureStore } from './system/store/configureStore'
 import RNBootSplash from "react-native-bootsplash";
 import { ErrorBoundary } from './service/ErrorBoundary'
+import * as RNLocalize from "react-native-localize";
+
+
+console.log(RNLocalize.getLocales());
+console.log(RNLocalize.getCurrencies());
 
 // YellowBox.ignoreWarnings(['Remote debugger'])
 
@@ -21,6 +25,12 @@ interface IProps {
 
 interface IState {
   appStatus: AppStateStatus
+}
+
+if (Platform.OS === 'android') {
+  if (UIManager.setLayoutAnimationEnabledExperimental) {
+    UIManager.setLayoutAnimationEnabledExperimental(true);
+  }
 }
 
 export class App extends PureComponent<IProps, IState>{

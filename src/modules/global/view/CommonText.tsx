@@ -6,7 +6,7 @@ import {
 } from 'app/system/helpers'
 
 interface IProps extends TextProps {
-
+  // fontWeight: ''
 }
 
 interface IState {
@@ -16,7 +16,7 @@ interface IState {
 export class CommonText extends PureComponent<IProps,IState>{
   render() {
     return (
-      <Text style={styles.text}>
+      <Text {...this.props} style={styles.text}>
 
       </Text>
     )

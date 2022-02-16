@@ -1,5 +1,8 @@
 export const fonts = {
-    geometriaLight: 'Geometria-Light',
-    geometriaBold: 'Geometria-Bold',
-    openSansRegular: 'OpenSans-Regular',
+    manropeBold: 'Manrope-Bold',
+    manropeExtraBold: 'Manrope-ExtraBold',
+    manropeMedium: 'Manrope-Medium',
+    manropeRegular: 'Manrope-Regular',
+    manropeSemiBold: 'Manrope-SemiBold',
+
 }
